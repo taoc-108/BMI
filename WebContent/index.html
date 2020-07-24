@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
+<title>BMI - Body mass index</title>
+<style>
+.heading {
+	text-align:center;
+	border-bottom:2px solid red;
+	color:black;
+
+}
+td th {
+	text-align:center;
+}
+caption {	
+	font-size:20px;
+	color:black;
+	font-family:verdana;
+}
+
+.textpool {
+	width:50%;
+	margin:auto;
+	padding:auto;
+	color:darkblue;
+	background-color:white;
+	border:0px;
+	border-bottom: 2px solid blue;
+	border-radius:5%;
+	transition:2s;
+}
+.textpool:focus {
+	font-family:verdana;
+	color:darkblue;
+	background-color:yellow;
+	transition:1s;
+	
+}
+.width-decrease {
+	width:50%;
+	text-align:center;
+}
+.caret-rotate {
+	transfrom:rotate(180deg);
+}
+.creator-address {
+	background-color:yellow;
+	border:2px solid red;
+	color:darkblue;
+	text-align:center;
+	font-size:1.5em;
+	padding:0;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<a href="/BMI_v0.1/index.html"><h1 class="heading">BMI</h1></a>
+<div class="row">
+<div class="col-sm-12">
+<button type="button" class="btn btn-primary toggleMotion" title="check out now...">What is BMI?<span class="caret spin"></span></button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 plottoggle">
+<p>BMI stands for BODY MASS INDEX. It is used to measure of height and weight. It can be calculated by 
+taking your weight in kilograms and dividing by the square of your height in meters.
+</p>
+<p>Let's see your how much your <abbr title="Body Mass Index">BMI</abbr> is...</p>
+<table class="table table-striped table-bordered">
+<caption style="text-align:center; text-decoration:underline;">BMI chart</caption>
+<thead>
+<tr><th>BMI</th><th>Interpretation</th></tr>
+</thead>
+<tbody>
+<tr><td>below 16</td><td>Seriously Underweight</td></tr>
+<tr><td>16-18</td><td>Underweight</td></tr>
+<tr><td>18-24</td><td>Normal weight</td></tr>
+<tr><td>24-29</td><td>Overweight</td></tr>
+<tr><td>29-35</td><td>Seriously overweight</td></tr>
+<tr><td>above 35</td><td>Gravely Overweight</td></tr>
+</tbody>
+</table>
+<br /><br />
+<hr style="color:red; border:4px solid red;" />
+<div class="creator-address">
+<address>Created by:<span style="color:blue; background-color:white; font-family:verdana;">KSHITIJ YADAV</span></address>
+</div>
+<hr style="color:red; border:4px solid red;" />
+<br />
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<form action="ComputeBMI" method="post">
+<table class="table table-striped table-bordered table-hover">
+<tr>
+<td><label for="weight">Enter your weight in pounds: </label></td>
+<td><input type="text" name="user_weight" class="textpool" required="required" placeholder="Enter your weight data here." />
+<br /><select name="weight_select">
+<option name="pounds">pounds</option>
+<option name="kilograms">kilograms</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for="height">Enter your height in inches: </label></td>
+<td><input type="text" name="user_height" class="textpool" required="required" placeholder="Enter your height data here." />
+<br /><select name="height_select">
+<option name="inches">inches</option>
+<option name="meters">meters</option>
+</select></td>
+</tr>
+<tr>
+<td><button type="reset" class="btn btn-primary" name="reset" class="btn-reset">Reset</button></td>
+<td><button type="submit" class="btn btn-primary" name="submit" class="btn-submit">Submit</button></td>
+</tr>
+</table>
+</form>
+</div>
+
+</div>
+</div> <!-- container fluid -->
+<script>
+$(document).ready(function() {
+	$(".plottoggle").hide();
+	$(".toggleMotion").click(function() {
+		$(".plottoggle").slideToggle(1000);
+	});
+	
+});
+
+</script>
+</body>
+</html>
+<!--  Made with xx from the beautiful creation of KSHITIJ YADAV -->
