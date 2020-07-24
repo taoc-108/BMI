@@ -15,22 +15,17 @@ It future, i will create the next version of BMI which is connected through data
 Task of future, to be accomplished:
 
 > login page
-
 > login page
-
 > sign in
-
 > sign up
-
 > record data into database
-
 > delete data into database
-
 > updata data into database
-
 That's all, for now.
 
 
 NERD TODAY, BOSS TOMMORROW.
+
 XX 
+
 KY
